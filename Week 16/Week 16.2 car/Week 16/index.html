@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select class="sel">
+        <option value="1000">red</option>
+        <option value="2000" selected="selected">blue</option>
+        <option value="3000">black</option>
+    </select>
+
+    <select class="sel">
+        <option value="1000">petrol</option>
+        <option value="2000" selected="selected">diesel</option>
+    </select>
+
+    <select class="sel">
+        <option value="1">Малюсенький</option>
+        <option value="1">Крохотный</option>
+        <option value="1">Маленький</option>
+        <option value="1">Средненький</option>
+        <option value="1">Чуть больше среднего</option>
+        <option value="1">Большой</option>
+        <option value="1">Огромный</option>
+    </select>
+    <select class="sel">
+        <option value="1">Мяу</option>
+        <option value="1">Гав</option>
+        <option value="1">Кря</option>
+        <option value="1">Дзынь</option>
+        <option value="1">Биб</option>
+        <option value="1">Хрю</option>
+    </select>
+
+    <button onClick="getSelectedItems()">Get Selected Item</button>
+
+    <script>
+        function getSelectedItems() {
+            let selects = document.getElementsByClassName('sel');
+
+            let arrsel = [];
+
+            for (let i = 0; i < selects.length; i++) {
+                let sel = selects[i];
+                let selValue = sel.options[sel.selectedIndex].value;
+                arrsel.push(selValue);
+            }
+        }
+    </script>
+</body>
+
+</html>
