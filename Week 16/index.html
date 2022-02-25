@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select name="sel">
+        <option value="1">Малюсенький</option>
+        <option value="1">Крохотный</option>
+        <option value="1">Маленький</option>
+        <option value="1">Средненький</option>
+        <option value="1">Чуть больше среднего</option>
+        <option value="1">Большой</option>
+        <option value="1">Огромный</option>
+    </select>
+
+    <select name="sel">
+        <option value="1">Мяу</option>
+        <option value="1">Гав</option>
+        <option value="1">Кря</option>
+        <option value="1">Дзынь</option>
+        <option value="1">Биб</option>
+        <option value="1">Хрю</option>
+    </select>
+    <button class="button" id="result">Нажми!</button>
+
+    <script>
+        let arr = [];
+        document.querySelector('.button').onclick = () => {
+            let elements = document.querySelectorAll('.sel')
+
+
+
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum += Number(arr[i]);
+            }
+            alert('Сумма: ' + sum);
+            let result = sum;
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>
